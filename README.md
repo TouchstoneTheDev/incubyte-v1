@@ -468,19 +468,15 @@ I'm prepared to discuss:
 
 ## 📸 Screenshots
 
-> **Note**: 
+### Dashboard (Admin View)
+![Admin Dashboard](./screenshots/dashboard-admin.png)
+*Admin view with Edit, Restock, and Delete controls*
 
 ### Login Page
 ![Login Page](./screenshots/login.png)
 
-### Registration Page
+### Registration Page  
 ![Registration Page](./screenshots/register.png)
-
-### Dashboard (User View)
-![User Dashboard](./screenshots/dashboard-user.png)
-
-### Dashboard (Admin View)
-![Admin Dashboard](./screenshots/dashboard-admin.png)
 
 ### Add Sweet Form
 ![Add Sweet Form](./screenshots/add-sweet.png)
@@ -488,7 +484,65 @@ I'm prepared to discuss:
 ### Search & Filter
 ![Search Functionality](./screenshots/search.png)
 
+> **Note**: Screenshots are from the deployed GCP application. You can view the live app at: https://sweet-shop-frontend-116580677087.us-central1.run.app
+
+## 📊 Test Report
+
+### Backend Test Results
+
+```
+ PASS  src/tests/auth.middleware.test.ts
+ PASS  src/tests/AuthService.test.ts
+
+Test Suites: 2 passed, 2 total
+Tests:       15 passed, 15 total
+Snapshots:   0 total
+Time:        3.479s
+```
+
+### Test Coverage Report
+
+| File                 | % Stmts | % Branch | % Funcs | % Lines |
+|---------------------|---------|----------|---------|---------|
+| **middleware/auth.ts** | 100% | 100% | 100% | 100% |
+| **services/AuthService.ts** | 100% | 50% | 100% | 100% |
+| **entities/User.ts** | 100% | 100% | 100% | 100% |
+
+### Tests Implemented
+
+#### AuthService Tests (8 tests)
+- ✅ hashPassword should hash the password
+- ✅ hashPassword should produce different hashes for same password  
+- ✅ comparePasswords should return true for matching passwords
+- ✅ comparePasswords should return false for non-matching passwords
+- ✅ generateToken should generate a valid JWT token
+- ✅ generateToken should include user info in token
+- ✅ verifyToken should verify and decode a valid token
+- ✅ verifyToken should throw error for invalid token
+
+#### Auth Middleware Tests (7 tests)
+- ✅ should return 401 if no token provided
+- ✅ should return 401 if token format is invalid
+- ✅ should return 401 if token is invalid
+- ✅ should attach user to request if token is valid
+- ✅ isAdmin should allow admin users
+- ✅ isAdmin should deny non-admin users
+- ✅ isAdmin should work with authenticate middleware
+
 ## 🚀 Deployment
+
+### 🌐 Live Application
+
+**The application is deployed and live on Google Cloud Platform:**
+
+| Service | URL |
+|---------|-----|
+| **Frontend** | https://sweet-shop-frontend-116580677087.us-central1.run.app |
+| **Backend API** | https://sweet-shop-backend-116580677087.us-central1.run.app |
+
+**Demo Admin Credentials:**
+- Email: `admin@sweetshop.com`
+- Password: `Admin123!`
 
 ### Deployment Options
 
