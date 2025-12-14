@@ -1,0 +1,11 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--build-arg'
+      - 'VITE_API_URL=https://sweet-shop-backend-116580677087.us-central1.run.app/api'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/sweet-shop-frontend'
+      - '.'
+images:
+  - 'gcr.io/$PROJECT_ID/sweet-shop-frontend'
