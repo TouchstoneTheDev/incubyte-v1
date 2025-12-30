@@ -422,7 +422,7 @@ export const Resume = () => {
               type="text"
               value={currentSkill}
               onChange={(e) => setCurrentSkill(e.target.value)}
-              onKeyPress={(e) => e.key === 'Enter' && addSkill()}
+              onKeyDown={(e) => e.key === 'Enter' && addSkill()}
               placeholder="Enter a skill"
             />
           </div>
@@ -459,7 +459,7 @@ export const Resume = () => {
               type="text"
               value={currentCertification}
               onChange={(e) => setCurrentCertification(e.target.value)}
-              onKeyPress={(e) => e.key === 'Enter' && addCertification()}
+              onKeyDown={(e) => e.key === 'Enter' && addCertification()}
               placeholder="Enter a certification"
             />
           </div>
