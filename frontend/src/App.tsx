@@ -4,6 +4,7 @@ import { useAuthStore } from './store/authStore';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
 import { Dashboard } from './pages/Dashboard';
+import { Resume } from './pages/Resume';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
 
@@ -27,6 +28,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/resume" element={<Resume />} />
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Routes>
