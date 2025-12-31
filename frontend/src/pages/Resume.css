@@ -1,0 +1,403 @@
+.resume-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.resume-form {
+  flex: 1;
+  max-width: 600px;
+  overflow-y: auto;
+  max-height: calc(100vh - 4rem);
+  padding-right: 1rem;
+}
+
+.resume-form h1 {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.form-section {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.section-header h2 {
+  color: #4a5568;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.add-btn,
+.remove-btn,
+.print-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.add-btn {
+  background-color: #4299e1;
+  color: white;
+  width: 100%;
+  padding: 0.75rem;
+}
+
+.add-btn:hover {
+  background-color: #3182ce;
+}
+
+.remove-btn {
+  background-color: #fc8181;
+  color: white;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.remove-btn:hover {
+  background-color: #f56565;
+}
+
+.added-items {
+  margin-bottom: 1rem;
+}
+
+.added-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #f7fafc;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  border-left: 3px solid #4299e1;
+}
+
+.added-item div {
+  flex: 1;
+  font-size: 0.875rem;
+  color: #2d3748;
+}
+
+/* Resume Preview */
+.resume-preview {
+  flex: 1;
+  max-width: 800px;
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.preview-header h2 {
+  color: #333;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.print-btn {
+  background-color: #48bb78;
+  color: white;
+  padding: 0.75rem 1.5rem;
+}
+
+.print-btn:hover {
+  background-color: #38a169;
+}
+
+.preview-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 600px;
+}
+
+.preview-section {
+  margin-bottom: 2rem;
+}
+
+.preview-section:last-child {
+  margin-bottom: 0;
+}
+
+.preview-section h1 {
+  color: #1a202c;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.preview-section h2 {
+  color: #2d3748;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.preview-section h3 {
+  color: #2d3748;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.preview-section p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.personal-info {
+  text-align: center;
+  border-bottom: 3px solid #4299e1;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.contact-info span {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info span:not(:last-child)::after {
+  content: '|';
+  margin-left: 1rem;
+  color: #cbd5e0;
+}
+
+.experience-item,
+.education-item {
+  margin-bottom: 1.5rem;
+}
+
+.experience-item:last-child,
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
+.company-duration,
+.institution-year {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.company,
+.institution {
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.duration,
+.year {
+  color: #718096;
+  font-style: italic;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background-color: #edf2f7;
+  color: #2d3748;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  border: 1px solid #cbd5e0;
+}
+
+.certifications-list {
+  list-style-position: inside;
+  padding-left: 0;
+  color: #4a5568;
+}
+
+.certifications-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Print Styles */
+@media print {
+  .resume-container {
+    display: block;
+    padding: 0;
+  }
+
+  .resume-form {
+    display: none;
+  }
+
+  .resume-preview {
+    max-width: 100%;
+    position: static;
+  }
+
+  .preview-header {
+    display: none;
+  }
+
+  .preview-content {
+    box-shadow: none;
+    padding: 0;
+    background: white;
+  }
+
+  .preview-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .preview-section h2 {
+    font-size: 1.1rem;
+    page-break-after: avoid;
+  }
+
+  .experience-item,
+  .education-item {
+    page-break-inside: avoid;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .resume-container {
+    flex-direction: column;
+  }
+
+  .resume-form,
+  .resume-preview {
+    max-width: 100%;
+  }
+
+  .resume-preview {
+    position: static;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 1rem;
+  }
+
+  .form-section {
+    padding: 1rem;
+  }
+
+  .preview-content {
+    padding: 1rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-info span::after {
+    display: none;
+  }
+
+  .company-duration,
+  .institution-year {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
